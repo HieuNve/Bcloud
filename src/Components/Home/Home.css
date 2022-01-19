@@ -1,0 +1,10 @@
+header{
+   padding: 30px;
+    background: #016227;
+    height: 50px;
+}
+
+header svg {
+    font-size: 25px;
+    color: #fff;
+}
