@@ -5,22 +5,21 @@
     font-family: Montserrat, sans-serif;
 }
 
-input, button {
+.login input, button {
     appearance: none;
     background: none;
     border: none;
     outline: none;
 }
 
-form {
+.login form {
     display: block;
     position: relative;
-
 }
 
 
 
-form:after {
+.login form:after {
     content: '';
     display: block;
     position: absolute;
@@ -34,7 +33,7 @@ form:after {
     box-shadow: 20px 20px 40px rgb(0, 0, 0, 0.2);
 }
 
-form .from-inner {
+.login form .from-inner {
     position: relative;
     display: block;
     background-color: #FFF;
@@ -43,14 +42,14 @@ form .from-inner {
     border-radius: 8px;
 }
 
-form .from-inner h2 {
+.login form .from-inner h2 {
     color: #888;
     font-size: 28px;
     font-weight: 500;
     margin-bottom: 30px;
 }
 
-form .from-inner .form-group {
+.login form .from-inner .form-group {
     display: block;
     width: 300px;
     margin-bottom: 30px;
@@ -81,7 +80,7 @@ form .from-inner .form-group {
     box-shadow: 0px 0px 3px rgb(0, 0, 0, 0.2);
 }
 
-.btnSubmit {
+.login .btnSubmit {
     display: inline-block;
     padding: 10px 15px;
     border-radius: 8px;
@@ -94,7 +93,7 @@ form .from-inner .form-group {
     cursor: pointer;
 }
 
-.btnSubmit:hover {
+.login  .btnSubmit:hover {
     background-position: 100% 0%;
 }
 

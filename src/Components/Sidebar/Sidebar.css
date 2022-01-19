@@ -1,11 +1,11 @@
 .sidenav {
-    width: 240px;
-    background: #011627;
+    width: 300px;
+    background: #ffffff;
     position: absolute;
     height: 95vh;
     padding: 0 30px;
     left: -100%;
-    transition: all 0.5s;
+    transition: all 0.75s;
 }
 
 .sidenav.active{
@@ -19,19 +19,26 @@ ul {
 ul li {
     font-family: "Roboto", sans-serif;
     margin-top: 15px;
+    width: 100%;
     list-style-type: none;
     text-decoration: none;
     display: block;
-    color: #fff;
+    color: #000000;
     font-size: 16px;
     padding: 10px 15px;
     border-radius: 6px;
 }
 
 ul li:hover {
-    background: #172b4d;
+    background: #cfd8dd;
+    font-weight: bold;
+    color: #1b77f6;
 }
 
 ul li:active {
-    background: #172b4d;
+    background: #cfd8dd;
+}
+.icon-slide-bar{
+    margin: 10px;
+    font-size: 25px;
 }

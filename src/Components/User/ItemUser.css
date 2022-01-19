@@ -1,0 +1,23 @@
+.item-user {
+    display: block;
+}
+
+.item-user-inner {
+    width: 170vh;
+    height: 50px;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.item-user-inner td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.item-user-inner tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.text-user{
+    margin-top: 10px;
+}

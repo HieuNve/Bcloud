@@ -1,0 +1,11 @@
+.notification{
+    height: 150px;
+    margin-left: 15px;
+
+}
+
+.noti-text{
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}

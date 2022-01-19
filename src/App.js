@@ -1,8 +1,10 @@
-import {useState} from "react";
+import React, {useState} from "react";
 import Login from "./Components/Login/Login.jsx"
 import Home from "./Components/Home/Home";
 import AppProvider from "./Context/AppProvider";
-import {Spin} from "antd"
+import AddUser from "./Components/Modal/AddUser/AddUser";
+import UserInfomation from "./Components/Modal/UserInfomation/UserInformation";
+import UserAction from "./Components/Modal/UserAction/UserAction";
 
 function App() {
     const adminUser = {
@@ -39,6 +41,9 @@ function App() {
                         <Login Login={LoginServe} error={error}/>
                     </div>
                 )}
+                <AddUser/>
+                <UserInfomation/>
+                <UserAction/>
             </AppProvider>
         </>
     );

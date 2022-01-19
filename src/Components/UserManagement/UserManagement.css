@@ -1,0 +1,48 @@
+.content {
+    height: 77vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
+    margin-left: 15px;
+    border-radius: 10px;
+}
+
+.content li {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.content li:nth-child(even) {
+    background: #fff;
+}
+
+.item-user {
+    display: block;
+}
+
+.item-user-inner {
+    width: 200vh;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.user {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-add-user {
+    margin-top: 10px;
+    /*background: dodgerblue;*/
+    background-image: linear-gradient(to right, dodgerblue 50%, #023b8a);
+    background-size: 200%;
+    background-position: 0%;
+    transition: 0.4s;
+    color: white;
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+}
+.btn-add-user:hover{
+    background-position: 100% 0%;
+}

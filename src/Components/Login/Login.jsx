@@ -17,7 +17,7 @@ function Login({Login, error}) {
         setDetail({...detail, pass: e.target.value})
     }
     return (
-        <div>
+        <div className={"login"}>
             <form onSubmit={submitHandle}>
                 <div className={"from-inner"}>
                     <h2>Login</h2>

@@ -1,10 +1,21 @@
 header {
     padding: 30px;
-    background: #016227;
+    background-image: url("../../Background/download.png");
     height: 50px;
 }
 
 header svg {
     font-size: 25px;
-    color: #fff;
+    color: #000000;
+
 }
+
+.avatar {
+    float: right;
+    width: 40px;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
