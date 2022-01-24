@@ -1,21 +1,43 @@
 import React, {useState} from 'react';
 import "./Login.css"
 import {LockOutlined, UserOutlined} from "@ant-design/icons"
+import {useHistory} from "react-router-dom";
 
-function Login({Login, error}) {
-    const [detail, setDetail] = useState({email: "", pass: ""})
-    const submitHandle = e => {
-        e.preventDefault();
-        Login(detail);
+function Login() {
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [error, setError] = useState()
+    const history = useHistory()
+
+    const adminUser = {
+        email: "admin@admin.com",
+        password: "admin123"
     }
 
     const inputNameHandle = e => {
-        setDetail({...detail, email: e.target.value})
+        setEmail(e.target.value)
     }
 
     const inputPasswordHandle = e => {
-        setDetail({...detail, pass: e.target.value})
+        setPassword(e.target.value)
     }
+
+    const LoginServer = () => {
+        console.log({email})
+        if (email == adminUser.email && password == adminUser.password) {
+            console.log(email)
+            history.push("/home")
+        } else {
+            console.log("not Match")
+            setError("Email or password incorrect")
+        }
+    }
+
+    const submitHandle = e => {
+        e.preventDefault();
+        LoginServer()
+    }
+
     return (
         <div className={"login"}>
             <form onSubmit={submitHandle}>
@@ -35,7 +57,7 @@ function Login({Login, error}) {
                             name="name"
                             id="name"
                             onChange={inputNameHandle}
-                            value={detail.email}
+                            value={email}
                             required={true}
                         />
                     </div>
@@ -46,7 +68,7 @@ function Login({Login, error}) {
                             name="password"
                             id="password"
                             onChange={inputPasswordHandle}
-                            value={detail.pass}
+                            value={password}
                             required={true}
                         />
                     </div>

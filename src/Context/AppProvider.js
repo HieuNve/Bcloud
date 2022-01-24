@@ -12,12 +12,13 @@ function AppProvider({children}) {
     const [isAddUser, setIsAddUser] = useState(false)
     const [isUserInfomation, setIsUserInfomation] = useState(false)
     const [isUserAction, setIsUserAction] = useState(false)
+    const [isLogout, setIsLogout] = useState(false)
     return (
         <AppContext.Provider value={{
             showNav, setShowNav, showUserManege, showBradio, showIot, showWeather,
             setShowBradio, setShowUserManege, setShowIot, setShowWeather, isAddUser,
             setIsAddUser, setIsUserInfomation, isUserInfomation, isUserAction,
-            setIsUserAction
+            setIsUserAction, isLogout, setIsLogout
         }}>
             {children}
         </AppContext.Provider>

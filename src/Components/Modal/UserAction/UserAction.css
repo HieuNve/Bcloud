@@ -1,5 +1,24 @@
-.modal-style{
+.modal-style {
     position: absolute;
     top: 20px;
     right: 100px;
+    border-radius: 10 xp;
+
+}
+
+.user-action {
+    margin-left: 14s0px;
+}
+
+.user-action .user-text {
+    margin-left: 20px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.user-action .avatar-user {
+    width: 80px;
+    height: 80px;
+    margin-left: 40px;
+    margin-bottom: 10px;
 }

@@ -1,10 +1,10 @@
 import React from 'react';
-import {Avatar, Form, Modal} from "antd";
+import {Avatar, Button, Form, Modal} from "antd";
 import "./UserAction.css"
 import {AppContext} from "../../../Context/AppProvider";
 
 function UserAction() {
-    const {isUserAction, setIsUserAction} = React.useContext(AppContext)
+    const {isUserAction, setIsUserAction, setIsLogout} = React.useContext(AppContext)
     const [form] = Form.useForm();
     const handleOK = () => {
         form.resetFields()
@@ -14,17 +14,35 @@ function UserAction() {
         form.resetFields()
         setIsUserAction(false)
     }
+
+    const Logout = () => {
+        setIsLogout(true)
+        setIsUserAction(false)
+    }
     return (
         <div>
             <Modal
                 className={"modal-style"}
-                title={"Add Account"}
                 visible={isUserAction}
                 onOk={handleOK}
                 onCancel={handleCancel}
+                footer={[
+                    <Button key="back" onClick={() => {
+                        Logout()
+                    }}>
+                        Đăng Xuất
+                    </Button>,
+                    <Button key="submit" type="primary">
+                        Đổi Mật Khẩu
+                    </Button>,
+                ]}
             >
-                <Avatar>A</Avatar>
-                <p>Nguyễn Văn Hiếu</p>
+                <div className={"user-action"}>
+                    <Avatar className={"avatar-user"}>A</Avatar>
+                    <p className={"user-text"}>Nguyễn Văn Hiếu</p>
+                    <p className={"user-text"}>Sinh viên thực tập - Bcloud</p>
+                </div>
+
             </Modal>
         </div>
     );
